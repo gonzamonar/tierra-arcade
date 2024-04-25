@@ -1,5 +1,5 @@
 {
-  "name": "tp",
+  "name": "mundo-arcade",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:tp": "node dist/tp/server/server.mjs"
+    "serve:ssr:mundo-arcade": "node dist/mundo-arcade/server/server.mjs",
+    "deploy": "ng build && firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {

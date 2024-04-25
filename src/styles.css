@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: pokemon;
+    src: url("assets/pokemon.ttf");
+}
+
+@font-face {
+    font-family: NES;
+    src: url("assets/nintendo-nes.ttf");
+}
+
+
+@font-face {
+    font-family: Flesh;
+    src: url("assets/fleshandblood.ttf");
+}
+
+body {
+    margin: 0px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #578fcc;
+    background-image: url("./assets/mundo-mario.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,49 @@
+
+
+
+.main-form {
+    max-width: 550px;
+    min-width: 400px;
+    width: 50%;
+    height: 50%;
+    background-color: #c14a2c;
+    color: #f8ddd5;
+    margin-top: 100px;
+    padding: 30px 20px;
+    font-size: 18px;
+    box-shadow: 3px 3px 0px #111111,
+                -3px -3px 0px #caafb8;
+    font-family: 'NES', "Pixelify Sans", sans-serif;
+    gap: 30px;
+}
+
+.main-form p {
+    text-align: center;
+    margin: 0px;
+}
+
+.main-form button {
+    font-size: 16px;
+    background-color: #ebbbaf;
+    font-family: 'NES', "Pixelify Sans", sans-serif;
+    padding: 10px;
+    border: 2px solid #4d5b9e;
+    color: #4d5b9e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
