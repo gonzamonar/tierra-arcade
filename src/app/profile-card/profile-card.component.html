@@ -1,0 +1,11 @@
+
+
+
+<div class="card flexrow">
+    <div class="type-container flex">
+        <img class="type" [src]="type1" [alt]="type1alt" *ngIf="hasType1">
+        <img class="type" [src]="type2" [alt]="type2alt" *ngIf="hasType2">
+    </div>
+    <p>{{username}}</p>
+    <img class="avatarImg" [src]="avatar" [alt]="avataralt">
+</div>

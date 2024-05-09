@@ -1,18 +1,19 @@
 
 <nav class="navbar">
-    <div class="col">
+    <div class="flexrow" [style.marginLeft.px]="25">
+        <a [routerLink]="['/']">
+            <img class="brand-logo" src="/assets/tierra-arcade.png" alt="logo" aria-hidden="true">
+        </a>
         <ul id="main-menu" class="menu">
             <li><a [routerLink]="['/']">HOME</a></li>
             <li><a [routerLink]="['/about']">EL CREADOR</a></li>
         </ul>
     </div>
-    <div class="col logo-col">
-        <a [routerLink]="['/']">
-            <img class="brand-logo" src="/assets/tierra-arcade.png" alt="logo" aria-hidden="true">
-        </a>
-    </div>
-    <div class="col user-col">
-        <p></p>
-        <a [routerLink]="['/login']"><p>LOGIN</p></a>
+    <div class="flex" [style.marginRight.px]="25">
+        <a [routerLink]="['/login']" *ngIf="!sessionData.active"><p>LOGIN</p></a>
+        <div class="profile flexrow" *ngIf="sessionData.active">
+            <app-profile-card ></app-profile-card>
+            <a (click)="Logout()"><p>LOGOUT</p></a>
+        </div>
     </div>
 </nav>

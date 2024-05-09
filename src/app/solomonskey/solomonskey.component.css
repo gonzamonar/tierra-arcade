@@ -1,0 +1,43 @@
+
+.cover {
+    background-color: #eefffc;
+}
+
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    height: 80vh;
+}
+
+#nes-canvas {
+    min-width: 256px;
+    min-height: 500px;
+    height: 100%;
+    background-color: black;
+}
+
+.btn-container {
+    padding: 25px 0px;
+    gap: 25px;
+}
+
+button, .button {
+    font-family: "NES";
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #18e2e5;
+    text-shadow: 2px 2px black;
+    cursor: pointer;
+}
+
+.button {
+    border: 2px solid black;
+    text-decoration: none;
+}
+
+.controls-container {
+    gap: 50px;
+}

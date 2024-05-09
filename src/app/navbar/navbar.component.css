@@ -27,22 +27,12 @@ nav {
     gap: 10px;
 }
 
-.col {
-    width: 33%;
-}
 
-.logo-col {
-    display: flex;
-    justify-content: center;
-}
-
-.user-col {
-    display: flex;
-    justify-content: space-around;
-}
-
-.user-col a, p {
-    color: white
+a, p {
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .menu {
@@ -52,15 +42,28 @@ nav {
     gap: 30px;
 }
 
-.menu a {
-    color: white;
+.profile {
+    gap: 25px;
 }
 
-
-.title {
-    color: red;
-}
-
-.subtitle {
+.pkmn-btn {
+    width: 60%;
+    background-image: linear-gradient(to bottom, #e73737 0%,#873f3f 100%);
+    border: 3px solid black;
     color: white;
+    border-radius: 50px;
+    padding: 5px;
+    text-shadow: 1px 1px 0 #000,
+            -1px 1px 0 #000,
+            1px -1px 0 #000,
+            -1px -1px 0 #000,
+            0px 1px 0 #000,
+            1px 0px 0 #000,
+            2px 2px 0 #000,
+            -2px 2px 0 #000,
+            2px -2px 0 #000,
+            -2px -2px 0 #000,
+            0px 2px 0 #000,
+            2px -1px 0 #000,
+            -2px -1px 0 #000;
 }

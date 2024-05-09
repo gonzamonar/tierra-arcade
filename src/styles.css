@@ -14,13 +14,54 @@
     src: url("assets/fleshandblood.ttf");
 }
 
+@font-face {
+    font-family: Matrix;
+    src: url("assets/Matrix\ Regular.ttf");
+}
+
+@font-face {
+    font-family: Stranger;
+    src: url("assets/Speltale.ttf");
+  }
+
+@font-face {
+    font-family: Casino;
+    src: url("assets/fonts/CasinoShadow.ttf");
+}
+
+@font-face {
+    font-family: CasinoFlat;
+    src: url("assets/fonts/CasinoFlat.ttf");
+}
+
+
+
+html {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0px;
+}
+
+ul, a, label {
+    font-size: 13px;
+}
+
+p {
+    font-size: 18px;
 }
 
 .flex {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -37,4 +78,26 @@ body {
     background-image: url("./assets/mundo-mario.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
 }

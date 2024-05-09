@@ -1,10 +1,7 @@
 
 
-<section class="section flex">
-    <div class="overlay"></div>
-    <div class="main-form flex">
-        <p>En este momento no cuentas con una sesión en curso.</p>
-        <p>Para continuar, ingresa en tu cuenta.</p>
-        <button [routerLink]="['/login']">DEJAME ENTRAR</button>
-    </div>
-</section>
+<app-home-require-login *ngIf="!session.active"></app-home-require-login>
+
+<app-home-control-panel *ngIf="session.active"></app-home-control-panel>
+<!-- <app-home-control-panel></app-home-control-panel> -->
+

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/mundo-arcade/browser",
+    "public": "dist/tierra-arcade/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

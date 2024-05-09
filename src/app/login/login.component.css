@@ -1,23 +1,5 @@
 
-
-* {
-    font-family: "pokemon", "Pixelify Sans", sans-serif;
-    /* border: 1px solid red; */
-}
-
-.hidden {
-    display: none;
-}
-
 .overlay {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -10;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
@@ -25,54 +7,14 @@
 .main-form {
     max-width: 550px;
     min-width: 400px;
-    width: 50%;
-    height: 50%;
+    width: 100%;
     background-color: white;
-    margin-top: 100px;
+    margin: 100px 0px;
     padding-bottom: 25px;
 }
 
-.form-container {
-    width: 100%;
-    margin-top: 25px;
-    gap: 35px;
-}
-
-.form-element {
-    width: 100%;
-    gap: 10px;
-}
-
-.ptitle {
-    font-size: 15px;
-    margin: 0px;
-}
-
-.btn-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.login-btn-container {
-    width: 100%;
-    flex-direction: row;
-    gap: 15px;
-}
-
-.avatar {
-    width: 70%;
-    padding-top: 20px;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.avatar img {
-    width: 50px;
-}
-
-
 button {
+    font-family: "pokemon", "Pixelify Sans", sans-serif;
     width: 50%;
     height: 40px;
     margin: 3px 2px 0px 0px;
@@ -82,51 +24,13 @@ button {
     cursor: pointer;
 }
 
-.pkmn-btn {
-    width: 60%;
-    background-image: linear-gradient(to bottom, #e73737 0%,#873f3f 100%);
-    border: 3px solid black;
-    color: white;
-    border-radius: 50px;
-    padding: 5px;
-    text-shadow: 1px 1px 0 #000,
-            -1px 1px 0 #000,
-            1px -1px 0 #000,
-            -1px -1px 0 #000,
-            0px 1px 0 #000,
-            1px 0px 0 #000,
-            2px 2px 0 #000,
-            -2px 2px 0 #000,
-            2px -2px 0 #000,
-            -2px -2px 0 #000,
-            0px 2px 0 #000,
-            2px -1px 0 #000,
-            -2px -1px 0 #000;
+.btn-container {
+    width: 100%;
 }
 
-.pkmn-btn-inactive {
-    background-image: linear-gradient(to bottom, #b3b2b2 0%,#474646 100%);
-    cursor: no-drop;
-}
-
-.inactive {
-    background-color: grey;
-}
-
-label {
-    font-size: 15px;
-}
-
-input[type=text], input[type=password] {
-    font-size: 16px;
-    width: 60%;
-    padding: 5px;
-    border: 2px solid white;
-    border-radius: 2px;
-    box-shadow: 0 1px 0 1px black,
-                inset 0 1px 0 1px black,
-                0 0 0 1px black,
-                inset 0 0 0 1px black;
+.btn-container button {
+    margin-top: 3px;
+    margin-left: 2px;
 }
 
 .pokebox {
@@ -137,83 +41,4 @@ input[type=text], input[type=password] {
                 0 0 0 1px black,
                 inset 0 0 0 1px black,
                 0px 0px 10px 10px #faeb29;
-}
-
-.pwd {
-    font-size: 18px;
-}
-
-p {
-    font-size: 13px;
-}
-
-
-.option-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.option-container label {
-    font-size: 13px;
-}
-
-.option-container img {
-    width: 30px;
-    padding: 2px;
-}
-
-.option-lbl {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.small {
-    font-size: 10px;
-}
-
-.type-selector {
-    display: flex;
-    width: 80%;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.type-selector select {
-    min-width: 60px;
-}
-
-.type-selector label {
-    font-size: 13px;
-}
-
-.type-display {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    /* padding-bottom: 15px; */
-}
-
-.remember-container {
-    width: 100%;
-    flex-direction: row;
-    gap: 5px;
-    justify-content: center;
-}
-
-.remember-container label {
-    font-size: 11px;
-}
-
-.recovery-container a {
-    color: #cf4036;
-}
-
-.recovery-container p {
-    font-size: 10px;
 }

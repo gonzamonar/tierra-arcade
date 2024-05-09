@@ -1,0 +1,36 @@
+
+
+<div class="login-form flex">
+    <div class="avatar flex">
+        <p>quick access:</p>
+        <div class="avatar-container flexrow">
+            <img (click)="quickAccess('ash@ketchum.com', 'pikachu')" src="../assets/pkmn-trainer.png" alt="">
+            <img (click)="quickAccess('kirby@gmail.com', 'kirbys')" src="../assets/kirby.png" alt="">
+            <img (click)="quickAccess('celeste@gmail.com', 'celeste')" src="../assets/celeste-madeline.png" alt="">
+        </div>
+    </div>
+    <div class="form-container flex">
+        <div class="form-element flex">
+            <label for="user">¿TU NOMBRE?</label>
+            <input type="text" name="user" id="user" [(ngModel)]="userMail">
+        </div>
+        <div class="form-element flex">
+            <label for="pwd">CONTRASEÑA:</label>
+            <input class="pwd" type="password" name="pwd" id="pwd" [(ngModel)]="userPwd">
+        </div>
+        <div class="alert" *ngIf="accessError">
+            Usuario o constraseña incorrectos.</div>
+        <div class="remember-container flex">
+            <input type="checkbox" name="remember" id="remember" [(ngModel)]="isRememberChecked" (change)="simbaOpacity = isRememberChecked ? 1 : 0 ;">
+            <label for="remember">Recuerda quién eres, Simba.</label>
+            <img class="simba" [style.opacity]="simbaOpacity" src="../assets/simba.png" alt="Silueta de Simba (Rey León).">
+        </div>
+        <div class="submit-btn-container flexrow">
+            <img [routerLink]="['/solomon']" src="../assets/door-closed.png" alt="">
+            <button class="pkmn-btn" (click)="LoginAuth()">Iniciar Sesion</button>
+        </div>
+        <!-- <div class="recovery-container">
+            <a href="#"><p>No recuerdo quién soy.</p></a>
+        </div> -->
+    </div>
+</div>

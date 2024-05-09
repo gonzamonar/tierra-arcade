@@ -1,16 +1,28 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { HomeRequireLoginComponent } from '../home-require-login/home-require-login.component';
+import { SessionService } from '../session.service';
+import { Session } from '../session';
+import { CommonModule } from '@angular/common';
+import { HomeControlPanelComponent } from '../home-control-panel/home-control-panel.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
+    CommonModule,
     RouterModule,
-    RouterOutlet
+    RouterOutlet,
+    HomeRequireLoginComponent,
+    HomeControlPanelComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  session: Session;
 
+  constructor(sessionService: SessionService) {
+    this.session = sessionService.session;
+  }
 }

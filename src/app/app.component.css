@@ -13,8 +13,9 @@
     list-style: none;
 }
 
+
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     z-index: -1;
 }

@@ -1,0 +1,33 @@
+
+<div class="cover flex">
+    
+    <div class="banner">
+        <button class="bordered">&larr; Volver</button>
+        <div class="title bordered">AHORCADO</div>
+        <div class="bordered">Score: 0</div>
+    </div>
+    
+    <div class="game-container flex">
+        <div class="btn-container flexrow">
+            <button *ngFor="let letter of alphabet" class="btn-content flex">
+                <div class="light-bulb theme-color-five"></div>
+                <img src="../assets/ahorcado/alfabeto/{{letter}}.png" alt="Letra {{letter}}.">
+            </button>
+        </div>
+        <div class="exodia flex">
+            <div class="flexrow">
+                <img [src]="exodia[0]" alt="">
+                <img [src]="exodia[1]" alt="">
+                <img [src]="exodia[2]" alt="">
+            </div>
+            <div class="flexrow">
+                <img [src]="exodia[3]" alt="">
+                <img [src]="exodia[4]" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="banner2">
+        <div class="title bordered">_ _ _ _ _ _ _</div>
+    </div>
+</div>

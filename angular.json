@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mundo-arcade": {
+    "tierra-arcade": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/mundo-arcade",
+            "outputPath": "dist/tierra-arcade",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,7 +27,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/jsnes.js",
+              "src/assets/nes-embed.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -62,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "mundo-arcade:build:production"
+              "buildTarget": "tierra-arcade:build:production"
             },
             "development": {
-              "buildTarget": "mundo-arcade:build:development"
+              "buildTarget": "tierra-arcade:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "mundo-arcade:build"
+            "buildTarget": "tierra-arcade:build"
           }
         },
         "test": {

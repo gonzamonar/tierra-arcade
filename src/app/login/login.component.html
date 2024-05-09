@@ -1,102 +1,19 @@
 
-<section class="section flex">
+<section class="flex">
     <div class="overlay"></div>
     <div class="main-form flex pokebox">
-        <div class="btn-container">
-            <button id="btn-load" (click)="changeViewLoad()">Cargar Partida</button>
-            <button id="btn-new" class="inactive" (click)="changeViewNew()">Nueva Partida</button>
+        <div class="btn-container flexrow">
+            <button [style.background-color]="loginViewIsActive ? 'white': '#babdd1'"
+            (click)="loginViewIsActive = true">Cargar Partida</button>
+            
+            <button [style.background-color]="!loginViewIsActive ? 'white': '#babdd1'"
+            (click)="loginViewIsActive = false">Nueva Partida</button>
         </div>
 
-        <div class="login-form flex">
-            <div class="avatar flex">
-                <!-- <img src="../assets/avatar.png" alt=""> -->
-                <img src="../assets/pkmn-trainer.png" alt="">
-                <img src="../assets/kirby.png" alt="">
-                <img src="../assets/celeste-madeline.png" alt="">
-            </div>
-            <div class="form-container flex">
-                <div class="form-element flex">
-                    <label for="user">¿TU NOMBRE?</label>
-                    <input type="text" name="user" id="user">
-                </div>
-                <div class="form-element flex">
-                    <label for="pwd">CONTRASEÑA:</label>
-                    <input class="pwd" type="password" name="pwd" id="pwd">
-                </div>
-                <div class="remember-container flex">
-                    <input type="checkbox" name="remember" id="remember">
-                    <label for="remember">Recuerda quién eres, Simba.</label>
-                </div>
-                <div class="login-btn-container flex">
-                    <img src="../assets/door-closed.png" alt="">
-                    <button class="pkmn-btn">Iniciar Sesion</button>
-                </div>
-                <div class="recovery-container">
-                    <a href="#"><p>No recuerdo quién soy.</p></a>
-                </div>
-            </div>
-        </div>
+        <app-login-loginview *ngIf="loginViewIsActive"></app-login-loginview>
 
-        <div class="register-form flex hidden">
-            <div class="form-container flex">
-                <div class="form-element flex">
-                    <label for="user">Primero, ¿cuál era tu nombre?</label>
-                    <input type="text" name="user" id="user">
-                </div>
-                <div class="form-element flex">
-                    <p class="ptitle">¿Eres chico o chica?</p>
-                    <div class="option-container">
-                        <label class="option-lbl">chico
-                            <input type="radio" checked="checked" name="gender">
-                            <img src="../assets/ice-climber-blue.png" alt="">
-                        </label>
-                        <label class="option-lbl">chica
-                            <input type="radio" name="gender">
-                            <span class="checkmark"></span>
-                            <img src="../assets/ice-climber-pink.png" alt="">
-                        </label>
-                        <label class="option-lbl">no binarie
-                            <input type="radio" name="gender">
-                            <img src="../assets/ice-climber-green.png" alt="">
-                        </label>
-                        <label class="option-lbl other">otro
-                            <input type="radio" name="gender">
-                            <img src="../assets/ice-climber-shadow.png" alt="">
-                        </label>
-                    </div>
-                    <!-- <p class="small">¿Para qué queremos saber tu género?</p> -->
-                </div>
-                <div class="form-element flex">
-                    <p class="ptitle">Elige tus tipos:</p>
-                    <div class="type-display">
-                        <img [src]="imgtype1" alt="">
-                        <img [src]="imgtype2" alt="">
-                    </div>
-                    <!-- <div><img *ngFor="let type of typelist" src="../assets/tipos/{{type}}.png" alt=""></div> -->
-                    <div class="type-selector">
-                        <label for="type1">Primario:</label>
-                        <select name="type1" id="type1" (change)="changeType1($event)">
-                            <option *ngFor="let type of typelist" [value]="type">{{type}}</option>
-                        </select>
-                    </div>
-                    <div class="type-selector">
-                        <label for="type2">Secundario:</label>
-                        <select name="type2" id="type2" (change)="changeType2($event)">
-                            <option *ngFor="let type of typelist" [value]="type">{{type}}</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-element flex">
-                    <label for="pwd">Elige una contraseña:</label>
-                    <input class="pwd" type="password" name="pwd" id="pwd">
-                </div>
-                <div class="login-btn-container flex">
-                    <button class="pkmn-btn">REGISTRARSE</button>
-                </div>
-            </div>
-        </div>
+        <app-login-registerview *ngIf="!loginViewIsActive"></app-login-registerview>
+    
     </div>
-
 </section>
 
