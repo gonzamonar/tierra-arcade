@@ -1,12 +1,14 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { LoginComponent } from './login/login.component';
-import { SolomonskeyComponent } from './solomonskey/solomonskey.component';
-import { DatalabComponent } from './datalab/datalab.component';
-import { GameAhorcadoComponent } from './game-ahorcado/game-ahorcado.component';
-import { GameMayorMenorComponent } from './game-mayor-menor/game-mayor-menor.component';
-import { LogsComponent } from './logs/logs.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { LoginComponent } from './components/login/login.component';
+import { SolomonskeyComponent } from './components/solomonskey/solomonskey.component';
+import { DatalabComponent } from './components/datalab/datalab.component';
+import { GameAhorcadoComponent } from './components/game-ahorcado/game-ahorcado.component';
+import { GameMayorMenorComponent } from './components/game-mayor-menor/game-mayor-menor.component';
+import { LogsComponent } from './components/logs/logs.component';
+import { AvatarSelectorComponent } from './components/avatar-selector/avatar-selector.component';
+import { ChatroomComponent } from './components/chatroom/chatroom.component';
 
 export const routes: Routes = [
     {
@@ -52,6 +54,11 @@ export const routes: Routes = [
     {
       path: 'juegos/mayormenor',
       component: GameMayorMenorComponent,
+      title: 'Tierra Arcade'
+    },
+    {
+      path: 'chat',
+      component: ChatroomComponent,
       title: 'Tierra Arcade'
     }
   ];

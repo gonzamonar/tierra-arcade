@@ -1,0 +1,674 @@
+[
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/packun_flower.png",
+        "File": "packun_flower",
+        "Number": 73,
+        "Name": "Piranha Plant",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/joker.png",
+        "File": "joker",
+        "Number": 74,
+        "Name": "Joker",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/dq_hero.png",
+        "File": "dq_hero",
+        "Number": 75,
+        "Name": "Hero",
+        "Game": null,
+        "Notes": "DRAGON QUEST\u00ae XI"
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/banjo_and_kazooie.png",
+        "File": "banjo_and_kazooie",
+        "Number": 76,
+        "Name": "Banjo & Kazooie",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/terry.png",
+        "File": "terry",
+        "Number": 77,
+        "Name": "Terry",
+        "Game": null,
+        "Notes": "Fatal Fury"
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/byleth.png",
+        "File": "byleth",
+        "Number": 78,
+        "Name": "Byleth",
+        "Game": "Fire Emblem",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/minmin.png",
+        "File": "minmin",
+        "Number": 79,
+        "Name": "Min Min",
+        "Game": null,
+        "Notes": "ARMS"
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/steve.png",
+        "File": "steve",
+        "Number": 80,
+        "Name": "Steve / Alex",
+        "Game": null,
+        "Notes": "Minecraft"
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/sephiroth.png",
+        "File": "sephiroth",
+        "Number": 81,
+        "Name": "Sephiroth",
+        "Game": "Final Fantasy VII",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/homura.png",
+        "File": "homura",
+        "Number": 82,
+        "Name": "Pyra / Mythra",
+        "Game": "Xenoblade",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/kazuya.png",
+        "File": "kazuya",
+        "Number": 83,
+        "Name": "Kazuya",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/sora.png",
+        "File": "sora",
+        "Number": 84,
+        "Name": "Sora",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/mario.png",
+        "File": "mario",
+        "Number": 1,
+        "Name": "Mario",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/donkey_kong.png",
+        "File": "donkey_kong",
+        "Number": 2,
+        "Name": "Donkey Kong",
+        "Game": "Donkey Kong",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/link.png",
+        "File": "link",
+        "Number": 3,
+        "Name": "Link",
+        "Game": "Legend of Zelda",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/samus.png",
+        "File": "samus",
+        "Number": 4,
+        "Name": "Samus",
+        "Game": "Metroid",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/dark_samus.png",
+        "File": "dark_samus",
+        "Number": 5,
+        "Name": "Dark Samus",
+        "Game": "Metroid",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/yoshi.png",
+        "File": "yoshi",
+        "Number": 6,
+        "Name": "Yoshi",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/kirby.png",
+        "File": "kirby",
+        "Number": 7,
+        "Name": "Kirby",
+        "Game": "Kirby",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/fox.png",
+        "File": "fox",
+        "Number": 8,
+        "Name": "Fox",
+        "Game": "StarFox",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/pikachu.png",
+        "File": "pikachu",
+        "Number": 9,
+        "Name": "Pikachu",
+        "Game": "Pokemon",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/luigi.png",
+        "File": "luigi",
+        "Number": 10,
+        "Name": "Luigi",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/ness.png",
+        "File": "ness",
+        "Number": 11,
+        "Name": "Ness",
+        "Game": "Earth Bound",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/captain_falcon.png",
+        "File": "captain_falcon",
+        "Number": 12,
+        "Name": "Capit\u00e1n Falcon",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/jigglypuff.png",
+        "File": "jigglypuff",
+        "Number": 13,
+        "Name": "Jigglypuff",
+        "Game": "Pokemon",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/peach.png",
+        "File": "peach",
+        "Number": 14,
+        "Name": "Peach",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/daisy.png",
+        "File": "daisy",
+        "Number": 15,
+        "Name": "Daisy",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/bowser.png",
+        "File": "bowser",
+        "Number": 16,
+        "Name": "Bowser",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/ice_climbers.png",
+        "File": "ice_climbers",
+        "Number": 17,
+        "Name": "Ice Climbers",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/sheik.png",
+        "File": "sheik",
+        "Number": 18,
+        "Name": "Sheik",
+        "Game": "Legend of Zelda",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/zelda.png",
+        "File": "zelda",
+        "Number": 19,
+        "Name": "Zelda",
+        "Game": "Legend of Zelda",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/dr_mario.png",
+        "File": "dr_mario",
+        "Number": 20,
+        "Name": "Dr. Mario",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/pichu.png",
+        "File": "pichu",
+        "Number": 21,
+        "Name": "Pichu",
+        "Game": "Pokemon",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/falco.png",
+        "File": "falco",
+        "Number": 22,
+        "Name": "Falco",
+        "Game": "StarFox",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/marth.png",
+        "File": "marth",
+        "Number": 23,
+        "Name": "Marth",
+        "Game": "Fire Emblem",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/lucina.png",
+        "File": "lucina",
+        "Number": 24,
+        "Name": "Lucina",
+        "Game": "Fire Emblem",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/young_link.png",
+        "File": "young_link",
+        "Number": 25,
+        "Name": "Young Link",
+        "Game": "Legend of Zelda",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/ganondorf.png",
+        "File": "ganondorf",
+        "Number": 26,
+        "Name": "Ganondorf",
+        "Game": "Legend of Zelda",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/mewtwo.png",
+        "File": "mewtwo",
+        "Number": 27,
+        "Name": "Mewtwo",
+        "Game": "Pokemon",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/roy.png",
+        "File": "roy",
+        "Number": 28,
+        "Name": "Roy",
+        "Game": "Fire Emblem",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/chrom.png",
+        "File": "chrom",
+        "Number": 29,
+        "Name": "Chrom",
+        "Game": "Fire Emblem",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/mr_game_and_watch.png",
+        "File": "mr_game_and_watch",
+        "Number": 30,
+        "Name": "Mr. Game & Watch",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/meta_knight.png",
+        "File": "meta_knight",
+        "Number": 31,
+        "Name": "Meta Knight",
+        "Game": "Kirby",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/pit.png",
+        "File": "pit",
+        "Number": 32,
+        "Name": "Pit",
+        "Game": "Kid Icarus",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/dark_pit.png",
+        "File": "dark_pit",
+        "Number": 33,
+        "Name": "Dark Pit",
+        "Game": "Kid Icarus",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/zero_suit_samus.png",
+        "File": "zero_suit_samus",
+        "Number": 34,
+        "Name": "Zero Suit Samus",
+        "Game": "Metroid",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/wario.png",
+        "File": "wario",
+        "Number": 35,
+        "Name": "Wario",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/snake.png",
+        "File": "snake",
+        "Number": 36,
+        "Name": "Snake",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/ike.png",
+        "File": "ike",
+        "Number": 37,
+        "Name": "Ike",
+        "Game": "Fire Emblem",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/pokemon_trainer.png",
+        "File": "pokemon_trainer",
+        "Number": 38,
+        "Name": "Entrenador Pokemon",
+        "Game": "Pokemon",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/diddy_kong.png",
+        "File": "diddy_kong",
+        "Number": 39,
+        "Name": "Diddy Kong",
+        "Game": "Donkey Kong",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/lucas.png",
+        "File": "lucas",
+        "Number": 40,
+        "Name": "Lucas",
+        "Game": "Earth Bound",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/sonic.png",
+        "File": "sonic",
+        "Number": 41,
+        "Name": "Sonic",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/king_dedede.png",
+        "File": "king_dedede",
+        "Number": 42,
+        "Name": "King Dedede",
+        "Game": "Kirby",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/olimar.png",
+        "File": "olimar",
+        "Number": 43,
+        "Name": "Olimar",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/lucario.png",
+        "File": "lucario",
+        "Number": 44,
+        "Name": "Lucario",
+        "Game": "Pokemon",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/rob.png",
+        "File": "rob",
+        "Number": 45,
+        "Name": "R.O.B.",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/toon_link.png",
+        "File": "toon_link",
+        "Number": 46,
+        "Name": "Toon Link",
+        "Game": "Legend of Zelda",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/wolf.png",
+        "File": "wolf",
+        "Number": 47,
+        "Name": "Wolf",
+        "Game": "StarFox",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/villager.png",
+        "File": "villager",
+        "Number": 48,
+        "Name": "Villager",
+        "Game": "Animal Crossing",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/mega_man.png",
+        "File": "mega_man",
+        "Number": 49,
+        "Name": "Mega Man",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/wii_fit_trainer.png",
+        "File": "wii_fit_trainer",
+        "Number": 50,
+        "Name": "Wii Fit Trainer",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/rosalina_and_luma.png",
+        "File": "rosalina_and_luma",
+        "Number": 51,
+        "Name": "Rosalina & Luma",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/little_mac.png",
+        "File": "little_mac",
+        "Number": 52,
+        "Name": "Little Mac",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/greninja.png",
+        "File": "greninja",
+        "Number": 53,
+        "Name": "Greninja",
+        "Game": "Pokemon",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/mii_fighter.png",
+        "File": "mii_fighter",
+        "Number": 54,
+        "Name": "Mii Fighter",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/palutena.png",
+        "File": "palutena",
+        "Number": 55,
+        "Name": "Palutena",
+        "Game": "Kid Icarus",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/pac_man.png",
+        "File": "pac_man",
+        "Number": 56,
+        "Name": "Pac-Man",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/robin.png",
+        "File": "robin",
+        "Number": 57,
+        "Name": "Robin",
+        "Game": "Fire Emblem",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/shulk.png",
+        "File": "shulk",
+        "Number": 58,
+        "Name": "Shulk",
+        "Game": "Xenoblade",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/bowser_jr.png",
+        "File": "bowser_jr",
+        "Number": 59,
+        "Name": "Bowser Jr.",
+        "Game": "Super Mario",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/duck_hunt.png",
+        "File": "duck_hunt",
+        "Number": 60,
+        "Name": "Duck Hunt",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/ryu.png",
+        "File": "ryu",
+        "Number": 61,
+        "Name": "Ryu",
+        "Game": "Street Fighter",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/ken.png",
+        "File": "ken",
+        "Number": 62,
+        "Name": "Ken",
+        "Game": "Street Fighter",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/cloud.png",
+        "File": "cloud",
+        "Number": 63,
+        "Name": "Cloud",
+        "Game": "Final Fantasy VII",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/corrin.png",
+        "File": "corrin",
+        "Number": 64,
+        "Name": "Corrin",
+        "Game": "Fire Emblem",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/bayonetta.png",
+        "File": "bayonetta",
+        "Number": 65,
+        "Name": "Bayonetta",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/inkling.png",
+        "File": "inkling",
+        "Number": 66,
+        "Name": "Inkling",
+        "Game": null,
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/ridley.png",
+        "File": "ridley",
+        "Number": 67,
+        "Name": "Ridley",
+        "Game": "Metroid",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/simon.png",
+        "File": "simon",
+        "Number": 68,
+        "Name": "Simon",
+        "Game": "Castlevania",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/richter.png",
+        "File": "richter",
+        "Number": 69,
+        "Name": "Richter",
+        "Game": "Castlevania",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/king_k_rool.png",
+        "File": "king_k_rool",
+        "Number": 70,
+        "Name": "King K. Rool",
+        "Game": "Donkey Kong",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/shizue.png",
+        "File": "shizue",
+        "Number": 71,
+        "Name": "Isabelle",
+        "Game": "Animal Crossing",
+        "Notes": null
+    },
+    {
+        "URL": "https://www.smashbros.com/assets_v2/img/fighter/thumb_h/gaogaen.png",
+        "File": "gaogaen",
+        "Number": 72,
+        "Name": "Incineroar",
+        "Game": "Pokemon",
+        "Notes": null
+    }
+]

@@ -1,0 +1,168 @@
+<!-- Avatar selector -->
+<app-avatar-selector *ngIf="avatarView" (avatarViewEvent)="switchView($event)" (avatarSrcEvent)="updateAvatar($event)"></app-avatar-selector>
+
+<form class="register-form flex" [formGroup]="registerForm" (ngSubmit)="OnFormSubmitted()" *ngIf="!avatarView">
+    <div class="form-container flex">
+        <!-- Username -->
+        <div class="form-element flex">
+            <label for="user">Primero, ¿cuál era tu nombre?</label>
+            <input id="user" name="user" type="text" formControlName="username" oninput="this.value = this.value.toLowerCase()">
+            <div *ngIf="this.registerForm.controls['username'].invalid &&
+            (this.registerForm.controls['username'].dirty || this.registerForm.controls['username'].touched)"
+            class="alert">
+                <div *ngIf="this.registerForm.controls['username'].errors?.['required']">
+                    Campo obligatorio.</div>
+                <div *ngIf="this.registerForm.controls['username'].errors?.['minlength']">
+                    Al menos 3 caracteres.</div>
+                <div *ngIf="this.registerForm.controls['username'].errors?.['maxlength']">
+                    Máximo 12 caracteres.</div>
+            </div>
+        </div>
+        <!-- Avatar -->
+        <div class="form-element flex">
+            <app-avatar-card
+            (click)="openAvatarSelector()"
+            [style.cursor]="'pointer'"
+            [avatarName]="this.registerForm.controls['username'].value"
+            [avatarSrc]="avatarSrc"
+            [type1]="this.registerForm.controls['type1'].value"
+            [type2]="this.registerForm.controls['type2'].value"
+            ></app-avatar-card>
+            <button (click)="openAvatarSelector()">Select Avatar</button>
+        </div>
+        <!-- Gender -->
+        <div class="form-element flex">
+            <div  class="form-element flex" *ngIf="!this.registerForm.controls['likesGender'].value">
+            <p class="ptitle">¿Eres chico o chica?</p>
+            <div class="option-container">
+                <label class="option-lbl">chico
+                    <input type="radio" name="gender" [value]="'m'" formControlName="gender">
+                    <app-iceclimber [color]="'#0070ef'"></app-iceclimber>
+                </label>
+                <label class="option-lbl">chica
+                    <input type="radio" name="gender" [value]="'f'" formControlName="gender">
+                    <span class="checkmark"></span>
+                    <app-iceclimber [color]="'#e0005f'"></app-iceclimber>
+                </label>
+                <label class="option-lbl">no binarie
+                    <input type="radio" name="gender" [value]="'nb'" formControlName="gender">
+                    <app-iceclimber [color]="this.registerForm.controls['climberColor'].value"></app-iceclimber>
+                </label>
+                <label class="option-lbl">otro
+                    <input type="radio" name="gender" [value]="'o'" formControlName="gender">
+                    <app-iceclimber [color]="'white'" [face]="'white'" [faceshade]="'white'" [black]="'white'"></app-iceclimber>
+                </label>
+            </div>
+            <div *ngIf="this.registerForm.controls['gender'].value == 'nb'">
+                <label for="favcolor" class="color-label">Elige un color:</label>
+                <input name="favcolor" type="color" formControlName="climberColor">
+            </div>
+        </div>
+            <div class="dislike-container flexrow">
+                <input type="checkbox" name="likegender" id="likegender" formControlName="likesGender">
+                <label for="likegender">Ni quiiri dicir mi giniri.</label>
+            </div>
+            <div *ngIf="this.registerForm.controls['gender'].invalid &&
+            (this.registerForm.controls['gender'].dirty || this.registerForm.controls['gender'].touched)"
+            class="alert">
+                <div *ngIf="this.registerForm.controls['gender'].errors?.['required']">
+                Campo obligatorio.</div>
+            </div>
+        </div>
+        <!-- Pokemon Type -->
+        <div class="form-element flex">
+            <div class="form-element flex" *ngIf="!this.registerForm.controls['likesPokemon'].value">
+                <p class="ptitle">Elige tus tipos:</p>
+                <div class="type-display">
+                    <img [src]="imgtype1" alt="Tipo {{ this.registerForm.controls['type1'].value }}">
+                    <img [src]="imgtype2" alt="Tipo {{ this.registerForm.controls['type2'].value }}">
+                </div>
+                <div class="type-selector">
+                    <label for="type1">Primario:</label>
+                    <select name="type1" id="type1" formControlName="type1" (change)="changeType1()">
+                        <option *ngFor="let type of typelist">{{type}}</option>
+                    </select>
+                </div>
+                <div class="type-selector">
+                    <label for="type2">Secundario:</label>
+                    <select name="type2" id="type2" formControlName="type2" (change)="changeType2()">
+                        <option *ngFor="let type of typelist">{{type}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="dislike-container flexrow">
+                <input type="checkbox" name="likepokemon" id="likepokemon" formControlName="likesPokemon">
+                <label for="likepokemon">Ni mi gisti Pikimin.</label>
+            </div>
+            <div *ngIf="this.registerForm.controls['type1'].invalid &&
+            (this.registerForm.controls['type1'].dirty || this.registerForm.controls['type1'].touched)"
+            class="alert">
+                <div *ngIf="this.registerForm.controls['type1'].errors?.['required']">
+                Campo obligatorio.</div>
+            </div>
+        </div>
+        <!-- HP House -->
+        <div class="form-element flex">
+            <div  class="form-element flex" *ngIf="!this.registerForm.controls['likesHarryPotter'].value">
+                <p class="ptitle">Elige tu casa:</p>
+                <div class="option-container">
+                    <label class="option-lbl" *ngFor="let house of hogwards">{{house}}
+                        <input type="radio" name="house" [value]="house" formControlName="house">
+                        <img src="../assets/HP_{{house}}.png" alt="Escudo de {{house}}">
+                    </label>
+                </div>
+            </div>
+            <div class="dislike-container flexrow">
+                <input  id="likehp" type="checkbox" name="likehp" formControlName="likesHarryPotter">
+                <label for="likehp">Ni mi gisti Hirry Pittir.</label>
+            </div>
+            <div *ngIf="this.registerForm.controls['house'].invalid &&
+            (this.registerForm.controls['house'].dirty || this.registerForm.controls['house'].touched)"
+            class="alert">
+                <div *ngIf="this.registerForm.controls['house'].errors?.['required']">
+                Campo obligatorio.</div>
+            </div>
+        </div>
+        <!-- Email -->
+        <div class="form-element flex">
+            <label for="mail">Elige un email para recibir spam:</label>
+            <input type="email" name="mail" id="mail" formControlName="email">
+            <div *ngIf="this.registerForm.controls['email'].invalid &&
+            (this.registerForm.controls['email'].dirty || this.registerForm.controls['email'].touched)"
+            class="alert">
+                <div *ngIf="this.registerForm.controls['email'].errors?.['required']">
+                Campo obligatorio.</div>
+                <div *ngIf="this.registerForm.controls['email'].errors?.['email']">
+                Formato de email inválido.</div>
+            </div>
+            <div class="alert">
+                <div *ngIf="errorEmailUsed">
+                El email ya se encuentra registrado.</div>
+                <div *ngIf="errorEmailInvalid">
+                Email inválido.</div>
+            </div>
+        </div>
+        <!-- Password -->
+        <div class="form-element flex">
+            <label for="pwd">Elige una contraseña:</label>
+            <input class="pwd" type="password" name="pwd" id="pwd" formControlName="pwd">
+            <div *ngIf="this.registerForm.controls['pwd'].invalid &&
+            (this.registerForm.controls['pwd'].dirty || this.registerForm.controls['pwd'].touched)"
+            class="alert">
+                <div *ngIf="this.registerForm.controls['pwd'].errors?.['required']">
+                Campo obligatorio.</div>
+                <div *ngIf="this.registerForm.controls['pwd'].errors?.['minlength']">
+                Al menos 6 caracteres.</div>
+            </div>
+            <div class="alert" *ngIf="errorPwdInvalid">
+            Constraseña inválida.</div>
+        </div>
+        <div  class="alert" *ngIf="genericError">
+            Error: {{ customError }}</div>
+        <!-- <p>Form Status: {{ registerForm.status }}</p> -->
+        <div class="submit-btn-container flexrow">
+            <button class="pkmn-btn" [disabled]="!this.registerForm.valid">REGISTRARSE</button>
+        </div>
+    </div>
+</form>
+

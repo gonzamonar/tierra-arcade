@@ -1,0 +1,24 @@
+
+<div class="component-container">
+    <div class="overlay" (click)="switchView('')"></div>
+    
+    <div class="selector-container">
+        <div class="title-container">
+            <p>Elige un avatar:</p>
+        </div>
+        <div class="card-container">
+            <div class="card flexrow" *ngFor="let avatar of avatarList">
+                <app-avatar-card
+                (click)="switchView(avatar['File'])"
+                [avatarName]="avatar['Name']"
+                [avatarSrc]="avatar['File']"
+                [style.cursor]="'pointer'"
+                ></app-avatar-card>
+            </div>
+        </div>
+        <div class="copyright-container">
+            <p>© Nintendo / HAL Laboratory, Inc.</p>
+            <p>https://www.smashbros.com/</p>
+        </div>
+    </div>
+</div>

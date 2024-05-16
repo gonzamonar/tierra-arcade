@@ -1,0 +1,69 @@
+
+
+.game-container {
+    font-family: 'Pixelify Sans';
+    width: 100%;
+    justify-content: center;
+    gap: 25px;
+}
+
+.game-card {
+    background-color: #b67539;
+    border-radius: 5px;
+    gap: 10px;
+    padding: 15px 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.game-card:hover {
+    background-color: #227c3f;
+    cursor: pointer;
+}
+
+.game-title {
+    font-family: "NES";
+    font-size: 22px;
+}
+
+.game-content p {
+    font-size: 22px;
+    padding-left: 10px;
+}
+
+.game-content img {
+    border-radius: 16px;
+}
+
+.chat-card {
+    background: #88c5fe;
+    border-radius: 5px;
+    gap: 10px;
+    padding: 15px 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.chat-card:hover {
+    background-color: #f7d919;
+    cursor: pointer;
+}
+
+.chat-card img {
+    width: 130px;
+    border-radius: 13px;
+}
+
+#msn {
+    width: 125px;
+}
+
+.chat-title {
+    color: black;
+    font-family: "NES";
+    font-size: 20px;
+}
+
+.chat-content {
+    font-size: 22px;
+    padding-left: 10px;
+}
+

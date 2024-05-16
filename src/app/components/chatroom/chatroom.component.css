@@ -1,0 +1,128 @@
+
+:host {
+    --background: black;
+    --background: #ebf3f7;
+}
+
+.cover {
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr repeat(3, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+    padding-left: 10px;
+}
+
+
+/* CONTAINERS */
+.toolbar {
+    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1212;
+}
+
+#chat-container {
+    background-color: white;
+    grid-area: 2 / 1 / 4 / 2;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    border: 2px solid #d1dcdd;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+}
+
+.input-container {
+    background-color: white;
+    grid-area: 4 / 1 / 5 / 2;
+    overflow-y: scroll;
+    border: 2px solid #d1dcdd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+
+.users-info {
+    background-color: rgb(151, 63, 63);
+    grid-area: 2 / 2 / 5 / 3;
+    overflow-y: scroll;
+}
+
+
+/* Chat Message */
+.msg p {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.msgSender {
+    padding-top: 10px;
+}
+
+.msgUsername {
+    color: red;
+}
+
+.msgTime {
+    padding-right: 5px;
+    color:#6e6e6e;
+    font-size: 13px;
+    vertical-align: center;
+}
+
+.msgContent {
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+
+/* Input elements */
+.input-container textarea {
+    height: 90%;
+    width: 85%;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border: none;
+    resize: none;
+}
+
+.input-container textarea:focus {
+    outline: none !important;
+}
+
+.input-container button {
+    height: 90%;
+    width: 15%;
+    cursor: pointer;
+    border: none;
+}
+
+.input-container button:hover {
+    background-color: rgb(252, 244, 236);
+}
+
+
+/* TOOLBAR */
+.toolbar-content {
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+}
+
+.toolbar-content button {
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    cursor: pointer;
+}

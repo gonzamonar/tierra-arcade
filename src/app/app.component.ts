@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
+import { Auth } from '@angular/fire/auth';
+import { onAuthStateChanged } from 'firebase/auth';
+import { SessionService } from './services/session.service';
+
 
 @Component({
   selector: 'app-root',
@@ -18,4 +22,17 @@ import { CommonModule } from '@angular/common';
 
 export class AppComponent {
   title: string = 'Tierra Arcade';
+
+  constructor(
+    public auth: Auth,
+    public session: SessionService
+  ){
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        if (this.auth.currentUser?.email){
+          session.updateSession(this.auth.currentUser?.email);
+        }
+      }
+    });
+  }
 }

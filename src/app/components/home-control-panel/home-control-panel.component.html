@@ -1,0 +1,41 @@
+
+
+<section class="section flex">
+    <div class="overlay"></div>
+    <div class="mariobox flex">
+        <p>MENÚ DE JUEGOS</p>
+        <p>Este es el panel de control de juegos.</p>
+        <p>Ya tienes una sesión activa.</p>
+
+        <div class="game-container flex">
+            <div class="chat-card flexrow" [routerLink]="['/chat']">
+                <img src="../../../assets/tarot/21.jpg" alt="Carta de Tarot 21: El Mundo">
+                <div class="chat-content flex">
+                    <p class="chat-title">INGRESAR A LA SALA DE CHAT</p>
+                    <img id="msn" src="../../../assets/chatroom/msn-icon.png" alt="">
+                </div>
+            </div>
+            <div class="game-card flex" [routerLink]="['/juegos/ahorcado']">
+                <p class="game-title">EL AHORCADO</p>
+                <div class="game-content flexrow">
+                    <img src="../../../assets/tarot/12.jpg" alt="Carta de Tarot 12: El Colgado">
+                    <p>Tradicional juego del ahorcado.<br><br>Se revela la cantidad de letras de una palabra y el jugador tiene que adivinar una por una las letras hasta descubrir por completo la palabra.</p>
+                </div>
+            </div>
+            <div class="game-card flex" [routerLink]="['/juegos/mayormenor']">
+                <p class="game-title">MAYOR O MENOR</p>
+                <div class="game-content flexrow">
+                    <img src="../../../assets/tarot/20.jpg" alt="Carta de Tarot 20: El Juicio">
+                    <p>Juego de cartas en el que el jugador debe adivinar si la próxima carta será menor o mayor que la actual.</p>
+                </div>
+            </div>
+            <div class="game-card flex" (click)="mensajePreguntados()">
+                <p class="game-title">PREGUNTADOS</p>
+                <div class="game-content flexrow">
+                    <img src="../../../assets/tarot/10.jpg" alt="Carta de Tarot 10: La Rueda de la Fortuna">
+                    <p>Juego de preguntas y respuestas organizado en seis categorías: Geografía, Ciencia, Historia, Deporte, Arte y Entretenimiento.<br><br>Reedición del clásico Carrera de Mente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

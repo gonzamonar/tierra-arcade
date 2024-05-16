@@ -1,0 +1,17 @@
+
+<section class="flex">
+    <div class="overlay"></div>
+    <div class="main-form flex pokebox">
+        <div class="btn-container flexrow">
+            <button [style.background-color]="loginViewIsActive ? 'white': '#babdd1'"
+            (click)="loginViewIsActive = true">Cargar Partida</button>
+            
+            <button [style.background-color]="!loginViewIsActive ? 'white': '#babdd1'"
+            (click)="loginViewIsActive = false">Nueva Partida</button>
+        </div>
+
+        <app-login-loginview *ngIf="loginViewIsActive"></app-login-loginview>
+        <app-login-registerview *ngIf="!loginViewIsActive"></app-login-registerview>
+    </div>
+</section>
+
