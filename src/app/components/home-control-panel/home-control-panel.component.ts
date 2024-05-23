@@ -13,6 +13,8 @@ import Swal from 'sweetalert2'; //https://sweetalert2.github.io
   styleUrls: ['../home/home.component.css', 'home-control-panel.component.css']
 })
 export class HomeControlPanelComponent {
+  ASSETS_DIR: string = '../../assets/images/home';
+
 
   mensajePreguntados() {
     Swal.fire({

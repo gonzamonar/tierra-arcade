@@ -1,0 +1,40 @@
+<div class="cover flex">
+    <div class="mariobox" [style.display]="running ? 'none' : 'block'">
+        <p class="title">corre MARIO, corre.</p>
+        <div class="description-container flex">
+            <p>Un <em>endless runner</em> lateral clasico donde hay que esquivar los objetos para seguir con vida</p>
+            <p>Dos botones: saltar y agacharse. Apenas mas dificil que una Atari 2600.</p>
+            <button (click)="startGame()">COMENZAR EL JUEGO</button>
+        </div>
+    </div>
+
+    <div class="score-container">SCORE: {{ score }}</div>
+    <div class="return-container"><button [routerLink]="['/']">IR AL INICIO</button></div>
+
+    <div class="button-container flexrow">
+        <button class="mario-btn" [disabled]="actionJump || actionDock" (click)="jump()">SALTAR</button>
+        <button class="mario-btn" [disabled]="actionJump || actionDock" (click)="dock()">AGACHARSE</button>
+    </div>
+    
+    <div class="sky">
+        <img [class.render]="rendered[0]" class="cloud high" [src]="cloudSrc" alt="nube">
+        <img [class.render]="rendered[1]" class="cloud high" [src]="cloudSrc" alt="nube">
+        <img [class.render]="rendered[2]" class="cloud low" [src]="cloudSrc" alt="nube">
+        <img [class.render]="rendered[3]" class="cloud low" [src]="cloudSrc" alt="nube">
+    </div>
+
+    <div class="game-container">
+        <img [class.jumping]="actionJump" [class.docking]="actionDock" id="mario" src="{{ASSETS_DIR}}/mario.{{running ? 'gif' : 'png'}}" alt="Mario">
+        <img id="object0" [class.throw]="throw[0]" class="object" [src]="bulletSrc" alt="bala">
+        <img id="object1" [class.throw]="throw[1]" class="object" [src]="bulletSrc" alt="bala">
+        <img id="object2" [class.throw]="throw[2]" class="object" [src]="brickSrc" alt="bloque de ladrillos">
+        <img id="object3" [class.throw]="throw[3]" class="object" [src]="bulletSrc" alt="bala" [style.top.px]="topLowBrick">
+        <img id="object4" [class.throw]="throw[4]" class="object shell" [src]="shellSrc" alt="caparazón" [style.top.px]="topLowBrick">
+        <img id="object5" [class.throw]="throw[5]" class="object shell" [src]="shellSrc" alt="caparazón" [style.top.px]="topLowBrick">
+    </div>
+
+    <div class="scroll-container">
+        <div [class.movingfloor]="running" class="floor">&nbsp;</div>
+    </div>
+</div>
+

@@ -47,10 +47,10 @@
               <div class="flip-card-inner" [class.transform]="flipping">
                 <!-- [class.transform]="flipping" -->
                 <div class="flip-card-front">
-                    <img src="../../../assets/mayormenor/deck/cover.png" alt="">
+                    <img src="{{DECK_ROOT}}/cover.png" alt="">
                 </div>
                 <div class="flip-card-back">
-                    <img src="../../../assets/mayormenor/deck/{{ deck[this.index] }}.png" alt="">
+                    <img src="{{DECK_ROOT}}/{{ deck[this.index] }}.png" alt="">
                 </div>
               </div>
             </div>
@@ -79,8 +79,8 @@
     <div class="last-card-container">
         <p>Ultima Carta</p>
         <div class="overlap">
-            <img id="img1" [class.hidden]="switchCard" src="../../../assets/mayormenor/deck/{{ lastCard }}.png" alt="">
-            <img id="img2" [class.hidden]="!switchCard" src="../../../assets/mayormenor/deck/{{ lastCardBis }}.png" alt="">
+            <img id="img1" [class.hidden]="switchCard" src="{{DECK_ROOT}}/{{lastCard}}.png" alt="">
+            <img id="img2" [class.hidden]="!switchCard" src="{{DECK_ROOT}}/{{lastCardBis}}.png" alt="">
         </div>
     </div>
 </div>

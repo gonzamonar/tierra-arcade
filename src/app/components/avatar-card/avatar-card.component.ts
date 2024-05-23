@@ -13,7 +13,9 @@ import { Component, Input } from '@angular/core';
 
 export class AvatarCardComponent {
   @Input() avatarName: string = '';
-  @Input() avatarSrc: string = 'mewtwo';
+  @Input() avatarSrc: string = '';
   @Input() type1: string = '';
   @Input() type2: string = '';
+  
+  ASSETS_DIR: string = '../../assets/images/profile';
 }

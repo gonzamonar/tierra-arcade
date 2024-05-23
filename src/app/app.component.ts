@@ -21,6 +21,7 @@ import { SessionService } from './services/session.service';
 })
 
 export class AppComponent {
+  ROOT_ASSETS = 'assets';
   title: string = 'Tierra Arcade';
 
   constructor(

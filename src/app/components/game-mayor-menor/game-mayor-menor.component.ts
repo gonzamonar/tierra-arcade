@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CroupierService } from '../../services/croupier.service';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { SoundPlayerService } from '../../services/sound-player.service';
 
 @Component({
   selector: 'app-game-mayor-menor',
@@ -12,7 +13,9 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   templateUrl: './game-mayor-menor.component.html',
   styleUrl: './game-mayor-menor.component.css'
 })
-export class GameMayorMenorComponent implements OnInit {
+export class GameMayorMenorComponent implements OnInit, OnDestroy {
+  ASSETS_DIR: string = '../../assets/images/games/mayormenor';
+  DECK_ROOT: string = this.ASSETS_DIR + '/deck';
   score: number = 0;
   index: number = 0;
   
@@ -32,30 +35,31 @@ export class GameMayorMenorComponent implements OnInit {
 
   constructor (
     private croupier: CroupierService,
+    private soundPlayer: SoundPlayerService
   ) {
     this.deck = this.croupier.getShuffledFrenchDeck();
   }
 
-
   ngOnInit(): void {
+    // this.soundPlayer.play_MayorMenor_AmbientMusic();
     setTimeout(() => {
       this.swapCard('none');
     }, 1000);
-    console.log(this.deck);
+  }
+
+  ngOnDestroy(): void {
+    // this.soundPlayer.play_MayorMenor_AmbientMusic();
+    // this.soundPlayer.cleanBuffer();
   }
 
 
   swapCard(bet: string){
+    this.soundPlayer.play_MayorMenor_FlipSound();
     let newCard = this.deck[this.index];
     let newCardValue = newCard.split("_")[1];
     let newCardNum = 0;
     let newCardSuit = newCard.split("_")[0];
     let newCardColor = (newCardSuit == 'diamantes' || newCardSuit == 'corazones') ? 'rojo' : 'negro';
-
-    console.log(this.index);
-    console.log("Apuesta: " + bet);
-    console.log("Nueva Carta: " + newCard);
-    console.log("Carta Anterior: " + this.prevCard);
 
     switch (newCardValue) {
       case 'J':
@@ -72,27 +76,36 @@ export class GameMayorMenorComponent implements OnInit {
         break;
       default:
         newCardNum = Number(newCardValue);
-  }
+    }
 
   if (bet != 'none'){
+    let guess = false;
     if (bet == 'mayor') {
       if (newCardNum > this.prevCardValue) {
           this.score += 1;
+          guess = true;
       } else {
         this.score -= 0;
       }
     } else if (bet == 'menor') {
         if (newCardNum < this.prevCardValue) {
           this.score += 1;
+          guess = true;
         } else {
           this.score -= 0;
         }
     } else if (bet == 'igual') {
         if (newCardNum == this.prevCardValue) {
           this.score += 1;
+          guess = true;
         } else {
           this.score -= 0;
         }
+      }
+      if (guess) {
+        this.soundPlayer.play_Poketrivia_CorrectSound();
+      } else {
+        this.soundPlayer.play_Poketrivia_WrongSound();
       }
     }
 
@@ -103,7 +116,6 @@ export class GameMayorMenorComponent implements OnInit {
 
     this.flipping = true;
     this.block = true;
-    // this.deck.shift();
     
     if (this.switchCard) {
       this.lastCard = this.deck[this.index];
@@ -114,6 +126,7 @@ export class GameMayorMenorComponent implements OnInit {
     setTimeout(() => {
       this.flipping = false;
       this.switchCard = !this.switchCard;
+      this.soundPlayer.play_MayorMenor_FlipSound();
     }, 2500);
         
     setTimeout(() => {

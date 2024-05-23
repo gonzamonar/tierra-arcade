@@ -1,0 +1,81 @@
+
+<div class="cover flex">
+    <div class="backHome flex" [routerLink]="['/']">
+        <div class="topSection flex">Regresar</div>
+        <div class="bottomSection flex">家に帰ります</div>
+    </div>
+    <div class="dex-container flexrow">
+        <div class="pokedex screenFlap">
+            <div class="pokedex-top">
+                <div class="circleBlue"><div class="littleCircleBlue"></div></div>
+                <div class="light-container flexrow">
+                    <div class="light lightred"><div class="spark sparkred"></div></div>
+                    <div class="light lightyellow"><div class="spark sparkyellow"></div></div>
+                    <div class="light lightgreen"><div class="spark sparkgreen"></div></div>
+                </div>
+            </div>
+            <div class="screen flex">
+                <div class="screenMiniLight-container flexrow">
+                    <div class="screenMiniLight"></div>
+                    <div class="screenMiniLight"></div>
+                </div>
+                <div class="screen-container">
+                    <img [src]="questionContent.imgSrc" alt="">
+                </div>
+                <div class="screenLight-container">
+                    <div class="screenLight"></div>
+                </div>
+            </div>
+            <div class="buttons flexrow">
+                <div class="circle" (click)="switchMusic()"></div>
+                <div class="visor-container flex">
+                    <div class="line-container flexrow">
+                        <div class="line red"></div>
+                        <div class="line blue"></div>
+                    </div>
+                    <div class="visor flex">
+                        <fa-icon class="visor-icon" [icon]="musicIcon"></fa-icon>
+                    </div>
+                </div>
+                <div>
+                    <div class="cross crossHorizontal"></div>
+                    <div class="cross crossVertical"></div>
+                </div>
+            </div>
+        </div>
+        <div class="gameFlap flex">
+            <div class="flexrow">
+                <div class="pokedex marginFlap"></div>
+                <div class="pokedex marginFlapCurve"></div>
+                <div class="pokedex marginFlap small"></div>
+            </div>
+            <div class="pokedex infoFlap flex">
+                <div class="infoScreen flex">
+                    <p>{{screenMessage}}</p>
+                </div>
+                <div class="info-btns-container flexrow">
+                    <button [disabled]='answering' class="option-btn" *ngFor="let option of questionContent.optionList" (click)="submitAnswer(option['isCorrect'])">{{option['option']}}</button>
+                </div>
+
+                <div class="info-objects-container flexrow">
+                    <div class="flexrow">
+                        <button class="white-btn"></button>
+                        <button class="white-btn"></button>
+                    </div>
+                    <div class="controllers-container">
+                        <div class="line-container flexrow">
+                            <div class="line black"></div>
+                            <div class="line black"></div>
+                        </div>
+                        <div class="circleYellow"><div class="littleCircleYellow"></div></div>
+                    </div>
+                </div>
+
+                <div class="miniScreenContainer flexrow">
+                    <div class="infoMiniScreen flex">Score:</div>
+                    <div class="infoMiniScreen flex">{{score}} / {{count}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

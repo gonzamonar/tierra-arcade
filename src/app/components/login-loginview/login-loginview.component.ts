@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
-import { Firestore, collectionData } from '@angular/fire/firestore';
+import { Firestore } from '@angular/fire/firestore';
 import { addDoc, collection } from 'firebase/firestore';
 import { SessionService } from '../../services/session.service';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
@@ -22,6 +22,7 @@ import { browserLocalPersistence, getAuth, inMemoryPersistence, setPersistence }
 })
 
 export class LoginLoginviewComponent {
+  ASSETS_DIR: string = '../assets/images/login-form';
   userMail: string = "";
   userPwd: string = "";
   accessError: boolean = false;

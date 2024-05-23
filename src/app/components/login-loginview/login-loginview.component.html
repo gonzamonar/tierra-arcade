@@ -4,9 +4,9 @@
     <div class="avatar flex">
         <p>quick access:</p>
         <div class="avatar-container flexrow">
-            <img (click)="quickAccess('ash@ketchum.com', 'pikachu')" src="../assets/pkmn-trainer.png" alt="">
-            <img (click)="quickAccess('kirby@gmail.com', 'kirbys')" src="../assets/kirby.png" alt="">
-            <img (click)="quickAccess('celeste@gmail.com', 'celeste')" src="../assets/celeste-madeline.png" alt="">
+            <img (click)="quickAccess('ash@ketchum.com', 'pikachu')" src="{{ASSETS_DIR}}/pkmn-trainer.png" alt="">
+            <img (click)="quickAccess('kirby@gmail.com', 'kirbys')" src="{{ASSETS_DIR}}/kirby.png" alt="">
+            <img (click)="quickAccess('celeste@gmail.com', 'celeste')" src="{{ASSETS_DIR}}/celeste-madeline.png" alt="">
         </div>
     </div>
     <div class="form-container flex">
@@ -23,10 +23,10 @@
         <div class="remember-container flex">
             <input type="checkbox" name="remember" id="remember" [(ngModel)]="isRememberChecked" (change)="simbaOpacity = isRememberChecked ? 1 : 0 ;">
             <label for="remember">Recuerda quién eres, Simba.</label>
-            <img class="simba" [style.opacity]="simbaOpacity" src="../assets/simba.png" alt="Silueta de Simba (Rey León).">
+            <img class="simba" [style.opacity]="simbaOpacity" src="{{ASSETS_DIR}}/simba.png" alt="Silueta de Simba (Rey León).">
         </div>
         <div class="submit-btn-container flexrow">
-            <img [routerLink]="['/solomon']" src="../assets/door-closed.png" alt="">
+            <img [routerLink]="['/solomon']" src="{{ASSETS_DIR}}/solomon-door-closed.png" alt="">
             <button class="pkmn-btn" (click)="LoginAuth()">Iniciar Sesion</button>
         </div>
         <!-- <div class="recovery-container">

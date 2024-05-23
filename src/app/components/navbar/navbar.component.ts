@@ -22,6 +22,7 @@ import Swal from 'sweetalert2'; //https://sweetalert2.github.io
 })
 export class NavbarComponent {
   sessionData!: Session;
+  ASSETS_DIR: string = '../../assets/images/home';
 
   constructor(
     public auth: Auth,

@@ -27,12 +27,15 @@ import { AvatarCardComponent } from '../avatar-card/avatar-card.component';
 
 
 export class LoginRegisterviewComponent implements OnInit {
+  ASSETS_DIR: string = '../assets/images/register-form';
+  PROFILE_DIR: string = '../assets/images/profile';
+
   typelist: string[] = ['', 'acero', 'agua', 'bicho', 'dragón', 'eléctrico', 'fantasma', 'fuego', 'hada',
   'hielo', 'lucha', 'normal', 'planta', 'psíquico', 'roca', 'siniestro', 'tierra', 'veneno', 'volador'];
   hogwards: string[] = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'];
 
-  imgtype1: string = "../assets/tipos/none.png";
-  imgtype2: string = "../assets/tipos/none.png";
+  imgtype1: string = this.PROFILE_DIR + "/tipos/none.png";
+  imgtype2: string = this.PROFILE_DIR + "/tipos/none.png";
 
   errorEmailUsed: boolean = false;
   errorEmailInvalid: boolean = false;
@@ -108,13 +111,13 @@ export class LoginRegisterviewComponent implements OnInit {
   changeType1(){
     let selectedType1 = this.registerForm.controls['type1'].value;
     let option = (selectedType1 == '') ? 'none' : selectedType1;
-    this.imgtype1 ="../assets/tipos/" + option + ".png";
+    this.imgtype1 = this.PROFILE_DIR + "/tipos/" + option + ".png";
   }
 
   changeType2(){
     let selectedType2 = this.registerForm.controls['type2'].value;
     let option = (selectedType2 == '') ? 'none' : selectedType2;
-    this.imgtype2 ="../assets/tipos/" + option + ".png";
+    this.imgtype2 = this.PROFILE_DIR + "/tipos/" + option + ".png";
   }
   
   OnFormSubmitted(){

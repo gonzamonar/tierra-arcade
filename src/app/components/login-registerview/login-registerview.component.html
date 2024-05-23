@@ -108,7 +108,7 @@
                 <div class="option-container">
                     <label class="option-lbl" *ngFor="let house of hogwards">{{house}}
                         <input type="radio" name="house" [value]="house" formControlName="house">
-                        <img src="../assets/HP_{{house}}.png" alt="Escudo de {{house}}">
+                        <img src="{{ASSETS_DIR}}/HP_{{house}}.png" alt="Escudo de {{house}}">
                     </label>
                 </div>
             </div>

@@ -1,27 +1,26 @@
 @font-face {
     font-family: pokemon;
-    src: url("assets/pokemon.ttf");
+    src: url("assets/fonts/pokemon.ttf");
 }
 
 @font-face {
     font-family: NES;
-    src: url("assets/nintendo-nes.ttf");
+    src: url("assets/fonts/nintendo-nes.ttf");
 }
-
 
 @font-face {
     font-family: Flesh;
-    src: url("assets/fleshandblood.ttf");
+    src: url("assets/fonts/fleshandblood.ttf");
 }
 
 @font-face {
     font-family: Matrix;
-    src: url("assets/Matrix\ Regular.ttf");
+    src: url("assets/fonts/MatrixRegular.ttf");
 }
 
 @font-face {
     font-family: Stranger;
-    src: url("assets/Speltale.ttf");
+    src: url("assets/fonts/Speltale.ttf");
   }
 
 @font-face {
@@ -32,6 +31,11 @@
 @font-face {
     font-family: CasinoFlat;
     src: url("assets/fonts/CasinoFlat.ttf");
+}
+
+@font-face {
+    font-family: SuperMario;
+    src: url("assets/fonts/SuperMarioBros.ttf");
 }
 
 
@@ -75,7 +79,7 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     background-color: #578fcc;
-    background-image: url("./assets/mundo-mario.jpg");
+    background-image: url("./assets/images/home/mundo-mario.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }

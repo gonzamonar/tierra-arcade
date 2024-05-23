@@ -1,4 +1,4 @@
-import { Component, Renderer2, Inject, ViewChild, ElementRef } from '@angular/core';
+import { Component, Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -19,16 +19,12 @@ export class SolomonskeyComponent {
     if (!this.hasStarted){
       let script = this._renderer2.createElement('script');
       script.type = `text/javascript`;
-      script.text = `nes_load_url('nes-canvas', "assets/solomonskey.nes");`;
+      script.text = `nes_load_url('nes-canvas', "assets/roms/solomonskey.nes");`;
       this._renderer2.appendChild(this._document.body, script);
       this.hasStarted = true;
     }
   }
   
-  goHome(){
-    alert("Home");
-  }
-
   getInfo(){
     alert("Movimiento: Arrow Keys. Start: Enter. Select: Tab A Button: A. B Button: S");
   }

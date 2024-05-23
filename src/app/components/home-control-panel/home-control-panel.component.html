@@ -9,31 +9,38 @@
 
         <div class="game-container flex">
             <div class="chat-card flexrow" [routerLink]="['/chat']">
-                <img src="../../../assets/tarot/21.jpg" alt="Carta de Tarot 21: El Mundo">
+                <img src="{{ASSETS_DIR}}/tarot/21.jpg" alt="Carta de Tarot 21: El Mundo">
                 <div class="chat-content flex">
                     <p class="chat-title">INGRESAR A LA SALA DE CHAT</p>
-                    <img id="msn" src="../../../assets/chatroom/msn-icon.png" alt="">
+                    <img id="msn" src="{{ASSETS_DIR}}/msn-icon.png" alt="">
                 </div>
             </div>
             <div class="game-card flex" [routerLink]="['/juegos/ahorcado']">
                 <p class="game-title">EL AHORCADO</p>
                 <div class="game-content flexrow">
-                    <img src="../../../assets/tarot/12.jpg" alt="Carta de Tarot 12: El Colgado">
+                    <img src="{{ASSETS_DIR}}/tarot/12.jpg" alt="Carta de Tarot 12: El Colgado">
                     <p>Tradicional juego del ahorcado.<br><br>Se revela la cantidad de letras de una palabra y el jugador tiene que adivinar una por una las letras hasta descubrir por completo la palabra.</p>
                 </div>
             </div>
-            <div class="game-card flex" [routerLink]="['/juegos/mayormenor']">
+            <div class="game-card flex" [routerLink]="['/juegos/mayor-menor']">
                 <p class="game-title">MAYOR O MENOR</p>
                 <div class="game-content flexrow">
-                    <img src="../../../assets/tarot/20.jpg" alt="Carta de Tarot 20: El Juicio">
+                    <img src="{{ASSETS_DIR}}/tarot/20.jpg" alt="Carta de Tarot 20: El Juicio">
                     <p>Juego de cartas en el que el jugador debe adivinar si la próxima carta será menor o mayor que la actual.</p>
                 </div>
             </div>
-            <div class="game-card flex" (click)="mensajePreguntados()">
-                <p class="game-title">PREGUNTADOS</p>
+            <div class="game-card flex" [routerLink]="['/juegos/poketrivia']">
+                <p class="game-title">POKETRIVIA</p>
                 <div class="game-content flexrow">
-                    <img src="../../../assets/tarot/10.jpg" alt="Carta de Tarot 10: La Rueda de la Fortuna">
-                    <p>Juego de preguntas y respuestas organizado en seis categorías: Geografía, Ciencia, Historia, Deporte, Arte y Entretenimiento.<br><br>Reedición del clásico Carrera de Mente.</p>
+                    <img src="{{ASSETS_DIR}}/tarot/10.jpg" alt="Carta de Tarot 10: La Rueda de la Fortuna">
+                    <p>Juego de preguntas y respuestas sobre Pokemon donde se debe adivinar cuál es el pokemon mostrado en la Pokedex.<br><br>Toda la información es obtenida a través de la PokeAPI.</p>
+                </div>
+            </div>
+            <div class="game-card flex" [routerLink]="['/juegos/corre-mario-corre']">
+                <p class="game-title">CORRE MARIO, CORRE</p>
+                <div class="game-content flexrow">
+                    <img src="{{ASSETS_DIR}}/tarot/14.jpg" alt="Carta de Tarot 14: Templanza">
+                    <p>Juego de tipo <em>endless runner</em> lateral donde controlamos a Mario para ayudarlo a evitar obstáculos saltando y agachándose.</p>
                 </div>
             </div>
         </div>

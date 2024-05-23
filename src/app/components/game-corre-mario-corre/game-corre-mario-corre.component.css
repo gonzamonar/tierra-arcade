@@ -1,0 +1,239 @@
+
+.cover {
+    justify-content: start;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #7d95ff;
+}
+
+.scroll-container {
+    width: 100vw;
+}
+
+.sky {
+    width: 100vw;
+    height: 60vh;
+}
+
+.floor {
+    width: 400%;
+    height: 50vh;
+    left: -100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    background-color: #ff7e00;
+    background-image: url("../../../assets/images/games/corremariocorre/floor.png");
+    background-size: 100px;
+    background-repeat: repeat;
+}
+
+
+.movingfloor {
+    animation: scroll-horizontal 2s linear infinite;
+}
+
+#mario {
+    margin-left: 150px;
+}
+
+.jumping {
+    animation: jump 2s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.docking {
+    animation: dock 2s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+@keyframes scroll-horizontal {
+    0%   { left: 0px }
+    100% { left: -1250px; }
+}
+
+@keyframes jump {
+    0%  { transform: translateY(0%); }
+    50% { transform: translateY(-100%); }
+}
+
+@keyframes dock {
+    0%  { transform: rotate(0deg)  translateX(0%); }
+    50% { transform: rotate(90deg) translateX(15%); }
+}
+
+.game-container {
+    width: 100vw;
+}
+
+.simple {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hitboxes {
+    background-color: transparent;
+    border: 2px solid green;
+    width: 90px;
+    height: 160px;
+    position: fixed;
+}
+
+.object {
+    position: absolute;
+    /* left: -80px; */
+    left: -100%;
+}
+
+.shell {
+    width: 80px;
+}
+
+.throw {
+    animation: throw 3s linear;
+}
+
+
+@keyframes throw {
+    0%   { left: 2000px; }
+    100% { left: -100px; }
+}
+
+
+.button-container {
+    z-index: 200;
+    position: absolute;
+    margin-top: 100px;
+    display: flex;
+    gap: 50px;
+}
+
+.mario-btn {
+    width: 200px;
+    height: 150px;
+    cursor: url("../../../assets/images/games/corremariocorre/star.png"), pointer;
+    background-color: #f88d2e;
+    border: 4px solid #070000;
+    box-shadow: inset -4px -4px 0 #965117, inset 4px 4px 0 #fab89b;
+    font-family: NES;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    text-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+}
+
+.mario-btn:hover {
+    background-color: #ac295f;
+}
+
+.mario-btn:disabled {
+    background: #777777;
+    cursor: no-drop;
+}
+
+
+.score-container {
+    position: fixed;
+    font-family: NES;
+    left: 20px;
+    top: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.mariobox {
+    z-index: 300;
+    position: fixed;
+    max-width: 800px;
+    min-width: 400px;
+    background-color: #de5918;
+    color: #ffddc9;
+    margin-top: 100px;
+    padding: 30px 20px;
+    font-size: 18px;
+    box-shadow: 3px 3px 0px #111111,
+                -3px -3px 0px #caafb8;
+    font-family: 'NES', "Pixelify Sans", sans-serif;
+}
+
+.mariobox .title {
+    font-family: SuperMario;
+    font-size: 100px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0px 1px 1px rgba(0,0,0,1),
+                0px 2px 1px rgba(0,0,0,1),
+                0px 3px 1px rgba(0,0,0,1),
+                0px 4px 1px rgba(0,0,0,1),
+                0px 5px 1px rgba(0,0,0,1),
+                0px 6px 1px rgba(0,0,0,1),
+                0px 7px 1px rgba(0,0,0,1),
+                0px 8px 1px rgba(0,0,0,1),
+                0px 9px 1px rgba(0,0,0,1),
+                0px 10px 1px rgba(0,0,0,1);
+}
+
+.description-container {
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.description-container p {
+    text-align: center;
+    margin: 0 20px;
+    line-height: 25px;
+}
+
+.description-container button {
+    font-size: 16px;
+    background-color: transparent;
+    font-family: 'NES', "Pixelify Sans", sans-serif;
+    padding: 15px;
+    background-color: #7d95ff;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.return-container {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+.return-container button {
+    color: white;
+    font-family: NES;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.cloud {
+    position: absolute;
+    left: -100%;
+}
+
+.high {
+    top: 100px;
+}
+
+.low {
+    top: 200px;
+}
+
+.render {
+    animation: render 5s linear;
+}
+
+@keyframes render {
+    0%   { left: 2000px; }
+    100% { left: -200px; }
+}

@@ -40,7 +40,7 @@ export class CroupierService {
   }
 
   /* Fisher–Yates (aka Knuth) Shuffle Algorithm */
-  shuffle(array: string[]) {
+  shuffle(array: any[]) {
     let currentIndex = array.length;
   
     while (currentIndex != 0) {

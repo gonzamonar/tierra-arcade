@@ -1,33 +1,61 @@
 
+
 <div class="cover flex">
-    
+    <div class="overlay" [style.display]="gameRunning ? 'none' : 'block'"></div>
+
+    <div class="gamebox" [style.display]="gameRunning ? 'none' : 'block'">
+        <div class="description-container flex">
+            <p class="description-title">Las reglas son <span class="bordered">simples</span>:</p>
+            <div class="reglas flex">
+                <p>• Un acierto suma un punto.</p>
+                <p>• Un error resta un punto y una vida.</p>
+                <p>• Cinco vidas, ni más ni menos.</p>
+                <p>• Al adivinar, el juego sigue y las vidas restantes</p>
+                <p>&emsp;se suman como puntos y vuelven a cinco.</p>
+                <p>• El juego no tiene fin (para quienes ganan).</p>
+                <p>• Al perder volverás al principio.</p>
+                <p>&nbsp;</p>
+            </div>
+            <button (click)="startGame()">QUE COMIENCE EL JUEGO</button>
+        </div>
+    </div>
+
     <div @flyInOut class="banner">
         <button class="bordered" [routerLink]="['/']">&larr; Volver</button>
-        <div class="title bordered">AHORCADO</div>
+        <div class="title bordered">EL&nbsp;&nbsp;AHORCADO</div>
         <div class="bordered">Score: {{ score }}</div>
     </div>
     
     <div class="game-container flex">
         <div class="btn-container flexrow">
-            <button *ngFor="let letter of alphabet" class="btn-content flex">
-                <div class="light-bulb theme-color-five"></div>
-                <img src="../assets/ahorcado/alfabeto/{{letter}}.png" alt="Letra {{letter}}.">
+            <button *ngFor="let letter of alphabet" [disabled]="isCharUsed(letter) || MASKED_KEYWORD == ''" class="btn-content flex"  (click)="submitAnswer(letter)">
+                <div class="light-bulb" [class]="bulbColor(letter)"></div>
+                <img src="{{ASSETS_DIR}}/alfabeto/{{letter}}.png" alt="Letra {{letter}}.">
             </button>
         </div>
         <div class="exodia flex">
             <div class="flexrow">
-                <img [src]="exodiaReveal[0]" alt="">
-                <img [src]="exodiaReveal[1]" alt="">
-                <img [src]="exodiaReveal[2]" alt="">
+                <img *ngIf="getLifes(1)" src="{{ASSETS_DIR}}/exodia-1.png" alt="">
+                <img *ngIf="getLifes(0)" src="{{ASSETS_DIR}}/exodia-0.png" alt="">
+                <img *ngIf="getLifes(5) && !getLifes(0)" src="/" alt="">
+                <img *ngIf="getLifes(2)" src="{{ASSETS_DIR}}/exodia-2.png" alt="">
             </div>
             <div class="flexrow">
-                <img [src]="exodiaReveal[3]" alt="">
-                <img [src]="exodiaReveal[4]" alt="">
+                <img *ngIf="getLifes(3)" src="{{ASSETS_DIR}}/exodia-3.png" alt="">
+                <img *ngIf="getLifes(4)" src="{{ASSETS_DIR}}/exodia-4.png" alt="">
             </div>
         </div>
     </div>
 
     <div class="banner2">
-        <div class="title bordered">_ _ _ _ _ _ _</div>
+        <div class="title">
+            <span [class]="getLifes(0) ? 'hearted' : 'bordered'">♡</span>
+            <span [class]="getLifes(1) ? 'hearted' : 'bordered'">♡</span>
+            <span [class]="getLifes(2) ? 'hearted' : 'bordered'">♡</span>
+            <span [class]="getLifes(3) ? 'hearted' : 'bordered'">♡</span>
+            <span [class]="getLifes(4) ? 'hearted' : 'bordered'">♡</span>
+        </div>
+        <div class="title bordered"> {{ showKeyword() }} </div>
+        <fa-icon class="icon flex" [icon]="musicIcon" (click)="switchMusic()"></fa-icon>
     </div>
 </div>

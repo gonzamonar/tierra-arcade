@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { AvatarCardComponent } from '../avatar-card/avatar-card.component';
+import { CroupierService } from '../../services/croupier.service';
 
 @Component({
   selector: 'app-avatar-selector',
@@ -14,6 +15,8 @@ import { AvatarCardComponent } from '../avatar-card/avatar-card.component';
 })
 
 export class AvatarSelectorComponent {
+  ASSETS_DIR: string = '../../assets/images/profile/avatar';
+
   avatarList: any[] = [];
   @Output() avatarViewEvent = new EventEmitter<boolean>();
   @Output() avatarSrcEvent = new EventEmitter<string>();
@@ -23,12 +26,14 @@ export class AvatarSelectorComponent {
     this.avatarSrcEvent.emit(avatarSrc);
   }
 
-  constructor () {
+  constructor (
+    private croupier: CroupierService
+  ) {
     this.fetchJSONData();
   }
 
   fetchJSONData() {
-    fetch("../../assets/avatar/avatarList.json")
+    fetch("../../assets/json/avatarList.json")
         .then((res) => {
             if (!res.ok) {
                 throw new Error
@@ -38,12 +43,9 @@ export class AvatarSelectorComponent {
         })
         .then((data) => {
           this.avatarList = data;
+          this.croupier.shuffle(this.avatarList);
         })
         .catch((error) => 
                console.error("Unable to fetch data:", error));
-  }
-
-  updateAvatar(avatar: string){
-    alert(avatar);
   }
 }
