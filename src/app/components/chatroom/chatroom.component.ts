@@ -4,6 +4,10 @@ import { ProfileCardComponent } from '../profile-card/profile-card.component';
 import { FormsModule } from '@angular/forms';
 import { MessengerService } from '../../services/messenger.service';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { SessionService } from '../../services/session.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-chatroom',
@@ -13,7 +17,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
     FormsModule,
     ProfileCardComponent,
     RouterModule,
-    RouterOutlet
+    RouterOutlet,
+    FontAwesomeModule
   ],
   templateUrl: './chatroom.component.html',
   styleUrl: './chatroom.component.css'
@@ -22,9 +27,11 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 export class ChatroomComponent {
   message: string = '';
   scrollHeight: string = '10px';
+  icon: IconDefinition = faPaperPlane;
 
   constructor (
     private messenger: MessengerService,
+    public session: SessionService
   ) 
   { }
 

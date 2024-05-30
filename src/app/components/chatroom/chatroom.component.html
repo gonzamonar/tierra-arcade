@@ -1,26 +1,28 @@
 
-<div class="cover">
+<div class="cover flex">
     <div class="toolbar">
-        <div class="toolbar-content flexrow">
-            <button [routerLink]="['/']">&larr; Volver</button>
+        <div class="toolbar-content">
+            <button [routerLink]="['/']">
+                <p>&larr; Volver</p>
+            </button>
             <app-profile-card></app-profile-card>
         </div>
     </div>
-    <div id="chat-container">
-        <div class="msg" *ngFor="let msg of getMessages()">
-            <p class="msgSender"><span class="msgUsername">{{ msg.user }}</span> dice:</p>
-            <p class="msgContent"><span class="msgTime" 
+    <div id="chat-container" class="flex">
+        <div class="msg" *ngFor="let msg of getMessages()" [class.ownMsg]="this.session.session.username == msg.user">
+            <p class="msgSender">{{ msg.user }}</p>
+            <p class="msgContent">{{ msg.message }}<span class="msgTime" 
                 title="{{ (msg.timestamp.seconds * 1000) | date:'dd/MM/yy - HH:mm:ss' }}">
-                [{{ (msg.timestamp.seconds * 1000) | date:'HH:mm' }}]</span>{{ msg.message }}</p>
+                {{ (msg.timestamp.seconds * 1000) | date:'HH:mm' }}</span></p>
         </div>
     </div>
 
     <div class="input-container">
-        <textarea name="Text1" cols="40" rows="5" [(ngModel)]="message"></textarea>
-        <button (click)="sendMessage()">Enviar</button>
+        <input type="text" name="textmsg" id="textmsg" [(ngModel)]="message" placeholder="Escribe un mensaje.">
+        <button (click)="sendMessage()">
+            <fa-icon class="sendIcon" [icon]="icon"></fa-icon>
+            Enviar
+        </button>
     </div>
 
-    <!-- <div class="users-info">
-        Lista de usuarios
-    </div> -->
 </div>

@@ -1,17 +1,36 @@
 
-<section class="section flex">
+<section class="section flexrow">
     <div class="overlay"></div>
-    <div class="main-form flex">
-        <div>
-            <p class="lvl-p">Lvl. 31</p>
-            <img src="{{ASSETS_DIR}}/healthbar.png" alt="">
-            <p class="title-p">The Maker</p>
+    <div class="flip-card">
+        <div class="flip-card-inner flex" [class.transform]="flipped">
+          <div class="flip-card-front flex">
+            <div>
+                <p class="lvl-p">Lvl. 31</p>
+                <img src="{{ASSETS_DIR}}/healthbar.png" alt="Barra de salud de Jefe Final.">
+                <p class="title-p">The Maker</p>
+            </div>
+            <div class="personal-info flex">
+                <img src="{{ASSETS_DIR}}/maker.jpg" alt="Foto de Gonzalo Montero, el creador de la página.">
+                <p>Gonzalo Montero (AKA <em>The Maker</em>) es estudiante del último cuatrimestre de la Tecnicatura Universitaria en Programación de la UTN-FRA.</p>
+                <p>Es, además, amante del cine y gamer de la guardia vieja: ningún joystick tiene demasiados ni muy pocos botones.</p>
+            </div>
+          </div>
+          <div class="flip-card-back flex">
+            <div>
+                <p class="lvl-p">Juego Propio:</p>
+                <p class="title-p">Corre Mario, Corre</p>
+                <img src="{{ASSETS_DIR}}/corremariocorre.{{flipped ? 'gif' : 'png'}}" alt="Imagen del juego Corre Mario, Corre">
+            </div>
+            <div class="personal-info flex">
+                <p>"Corre Mario, Corre" es un juego de plataformas <em>endless runner</em> ("corredor infinito") lateral en el que nuestro protagonista, Mario, debe esquivar caparazones, balas y bloques de ladrillos para seguir corriendo.</p>
+                <p>El jugador o jugadora mediante los botones de acción de SALTAR y AGACHARSE debe reaccionar para evitar los obstáculos.</p>
+                <p>Cada objeto esquivado suma un punto al Score. El juego es infinito, el objetivo es sumar la mayor cantidad de puntos posibles.</p>
+            </div>
+          </div>
         </div>
-
-        <div class="personal-info flex">
-            <img src="{{ASSETS_DIR}}/maker.jpg" alt="">
-            <p>Gonzalo Montero (AKA <em>The Maker</em>) es estudiante del último cuatrimestre de la Tecnicatura Universitaria en Programación de la UTN-FRA.</p>
-            <p>Es, además, amante del cine y gamer de la guardia vieja: ningún joystick tiene demasiados ni muy pocos botones.</p>
-        </div>
-    </div>
+      </div>
+      <button class="btn-flipper" (click)="flipped = !flipped">
+        <fa-icon [icon]="icon"></fa-icon>
+        {{ flipped ? 'El Creador' : 'Juego Propio' }}
+      </button>
 </section>
